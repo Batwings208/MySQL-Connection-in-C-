@@ -17,19 +17,19 @@ namespace mysqlconnection
                 connection.ConnectionString = "server = localhost; User Id = " + user + "; " +
                     "Persist Security Info = True; database = " + database + "; Password = " + password;
                 connection.Open();
-                Console.WriteLine("Succesfully connected!");
+                Console.WriteLine("Connection Confirmed!");
             }
 
             catch (Exception e)
             {
-                Console.WriteLine("Not Successful! due to " + e.ToString());
+                Console.WriteLine("Connection has failed " + e.ToString());
             }
         }
         public static void Main()
         {
             Connect("root", "password", "database"); // Change password and database to your db password and your db name, leave root
             connection.Close();
-            Console.WriteLine($"Connection Confirmed: {connection}");
+            Console.WriteLine($"Connection Information: {connection}"); //Ignore, useless really if you don't want it
         }
     }
 }
