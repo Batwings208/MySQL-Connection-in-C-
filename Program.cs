@@ -1,5 +1,5 @@
 ﻿using System;
-using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient; // install correct package through  "Tools/Manage nutGet Packages" and then search up MySQL. (For Visual Studio Users intructions)
 
 
 namespace mysqlconnection
@@ -27,7 +27,7 @@ namespace mysqlconnection
         }
         public static void Main()
         {
-            Connect("root", "root54321", "Car");
+            Connect("root", "password", "database"); // Change password and database to your db password and your db name, leave root
             connection.Close();
             Console.WriteLine($"Connection Confirmed: {connection}");
         }
